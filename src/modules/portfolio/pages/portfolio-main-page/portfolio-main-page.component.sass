@@ -1,0 +1,26 @@
+@import 'primeflex/primeflex.scss'
+
+$navbar-height: 60px
+$sidebar-width: 260px
+
+.custom-sidebar
+  @include styleclass('z-2 border-right-1 lg:static lg:inline h-screen left-0 top-0 animation-duration-100 fixed')
+  width: $sidebar-width
+  &__content
+    @include styleclass('fixed')
+
+.page-column-container
+  @include styleclass('w-full z-1')
+
+.page-main-content
+  @include styleclass('w-full')
+
+.portfolio-main-content
+  margin-top: 200px
+
+.portfolio-main-navbar
+  @include styleclass('w-full surface-0 px-5 z-2 border-bottom-1 surface-border align-items-center justify-content-between flex fixed')
+  height: $navbar-height
+
+.portfolio-main-page-container
+  @include styleclass('min-h-screen flex')
