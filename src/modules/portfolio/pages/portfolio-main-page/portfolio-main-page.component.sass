@@ -2,25 +2,36 @@
 
 $navbar-height: 60px
 $sidebar-width: 260px
+$assets-path: '../../../../assets'
+$background-assets-path: '/backgrounds'
+$full-background-assets-path: $assets-path + '' + $background-assets-path
+
+.content-section
+  @include styleclass('w-full min-h-screen bg-cover')
 
 .custom-sidebar
-  @include styleclass('z-2 border-right-1 lg:static lg:inline h-screen left-0 top-0 animation-duration-100 fixed')
+  @include styleclass('z-2 border-right-1 lg:static lg:inline h-screen left-0 top-0 animation-duration-100 fixed surface-section')
   width: $sidebar-width
   &__content
     @include styleclass('fixed')
 
-.page-column-container
-  @include styleclass('w-full z-1')
-
-.page-main-content
+.main-content
   @include styleclass('w-full')
+
+.portfolio-main-page-column-container
+  @include styleclass('w-full z-1')
 
 .portfolio-main-content
   margin-top: 200px
 
 .portfolio-main-navbar
-  @include styleclass('w-full surface-0 px-5 z-2 border-bottom-1 surface-border align-items-center justify-content-between flex fixed')
+  @include styleclass('w-full surface-0 px-5 z-2 border-bottom-1 surface-border align-items-center justify-content-between flex')
   height: $navbar-height
+  &__left
+    @include styleclass('flex gap-2')
 
 .portfolio-main-page-container
   @include styleclass('min-h-screen flex')
+
+.skills-section
+  background-image: url($full-background-assets-path + '/layered-waves-blue.svg')  
