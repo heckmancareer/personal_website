@@ -19,7 +19,14 @@
     </header>
     <main class="main-content">
       <div class="content-section skills-section">
-        
+        <h1 class="skills-section__header">
+          Skills
+        </h1>
+        <span class="skills-section__grid">
+          @for (group of data.skills; track $index) {
+            <portfolio-skills-frame [headerText]="group.groupName" [displayedSkills]="group.groupSkills" class="col-12 lg:col-6"></portfolio-skills-frame>
+          }
+        </span>
       </div>
     </main>
   </div>

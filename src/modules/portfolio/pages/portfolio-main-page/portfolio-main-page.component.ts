@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PORTFOLIO_DATA } from './main-page-data';
 
 @Component({
   selector: 'app-portfolio-main-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio-main-page.component.sass'
 })
 export class PortfolioMainPageComponent {
-
+  data: any = PORTFOLIO_DATA
 }

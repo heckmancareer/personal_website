@@ -34,4 +34,9 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   @include styleclass('min-h-screen flex')
 
 .skills-section
-  background-image: url($full-background-assets-path + '/layered-waves-blue.svg')  
+  background-image: url($full-background-assets-path + '/layered-waves-blue.svg')
+  &__grid
+    margin-top: 15px
+    @include styleclass('w-full grid grid-nogutter')
+  &__header
+    @include styleclass('w-full font-light text-white text-center text-6xl m-0 underline')  

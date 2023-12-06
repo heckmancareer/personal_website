@@ -1,1 +1,19 @@
-<p>skills-frame works!</p>
+<p-fieldset>
+  <ng-template pTemplate="header">
+    {{headerText}}
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div class="skill-container">
+      @for (skill of displayedSkills; track $index) {
+        <div class="skill-emblem">
+          <span class="skill-emblem__image">
+            <img ngSrc="{{relativeImagePath + 'emblems/' + skill.imagePath}}" width="100" height="100">
+          </span>
+          <span class="skill-emblem__label">
+            {{skill.imageLabel}}
+          </span>
+        </div>
+      }
+    </div>
+  </ng-template>
+</p-fieldset>
