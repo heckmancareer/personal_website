@@ -9,9 +9,10 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioMainPageComponent} from './pages/portfolio-main-page/portfolio-main-page.component';
 import { SkillsFrameComponent } from './components/skills-frame/skills-frame.component';
+import { EmployerHistoryFrameComponent } from './components/employer-history-frame/employer-history-frame.component';
 
 @NgModule({
-  declarations: [ PortfolioMainPageComponent, SkillsFrameComponent ],
+  declarations: [ PortfolioMainPageComponent, SkillsFrameComponent, EmployerHistoryFrameComponent ],
   imports: [
     CommonModule,
     PortfolioRoutingModule,

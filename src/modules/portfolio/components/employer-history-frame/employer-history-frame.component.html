@@ -1,0 +1,42 @@
+<p-fieldset>
+  <ng-template pTemplate="header">
+    <span class="header-container">
+      <img src="{{relativeImagePath + jobInfo.logoPath}}" />
+      {{jobInfo.employerName}}
+    </span>
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div class="content-container">
+      <p class="employment__description">
+        {{jobInfo.employerDescription}}
+      </p>
+      <div class="employment__timerange">
+        {{jobInfo.startDate}} - {{jobInfo.endDate}}
+        <div class="current-employment-indicator"></div>
+      </div>
+      <div class="employment__job-title">
+        {{jobInfo.jobTitle}}
+      </div>
+      <span class="employment__information">
+        <ul class="employment__information__list">
+          @for (bullet of jobInfo.summaryBullets; track $index) {
+            <li class="employment__information__list__bullet">{{bullet}}</li>
+          }
+        </ul>
+      </span>
+      <span class="primary-skills-header">Primary Skills Used:</span>
+      <span class="employment__skills">
+        @for (skill of jobInfo.primarySkills; track $index) {
+          <div class="skill-emblem">
+            <span class="skill-emblem__image">
+              <img ngSrc="{{relativeImagePath + '' + skill.imagePath}}" width="100" height="100">
+            </span>
+            <span class="skill-emblem__label">
+              {{skill.imageLabel}}
+            </span>
+          </div>
+        }
+      </span>
+    </div>
+  </ng-template>
+</p-fieldset>

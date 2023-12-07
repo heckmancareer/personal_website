@@ -19,14 +19,27 @@
     </header>
     <main class="main-content">
       <div class="content-section skills-section">
-        <h1 class="skills-section__header">
+        <h1 class="skills-section__header section-header">
           Skills
         </h1>
         <span class="skills-section__grid">
           @for (group of data.skills; track $index) {
-            <portfolio-skills-frame [headerText]="group.groupName" [displayedSkills]="group.groupSkills" class="col-12 lg:col-6"></portfolio-skills-frame>
+            <portfolio-skills-frame 
+              [headerText]="group.groupName" 
+              [displayedSkills]="group.groupSkills" 
+              class="skills-section__frame"></portfolio-skills-frame>
           }
         </span>
+      </div>
+      <div class="content-section employment-history-section">
+        <h1 class="employment-history-section__header section-header">
+          Work History
+        </h1>
+        <span class="employment-history-section__grid">
+          @for (employment of data.employmentHistory; track $index) {
+            <portfolio-employer-history-frame [jobInfo]="employment" class="col-12 lg:col-8 lg:col-offset-2 p-3"></portfolio-employer-history-frame>
+          }
+        </span> 
       </div>
     </main>
   </div>

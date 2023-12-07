@@ -15,6 +15,11 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   &__content
     @include styleclass('fixed')
 
+.employment-history-section
+  background-image: url($full-background-assets-path + '/layered-peaks-green.svg')
+  &__grid
+    @include styleclass('w-full grid grid-nogutter')
+
 .main-content
   @include styleclass('w-full')
 
@@ -33,10 +38,16 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
 .portfolio-main-page-container
   @include styleclass('min-h-screen flex')
 
+.section-header
+  @include styleclass('w-full font-light text-white text-center text-6xl m-0 underline')
+
 .skills-section
   background-image: url($full-background-assets-path + '/layered-waves-blue.svg')
+  &__frame
+    @include styleclass('col-12 lg:col-6 p-3')
   &__grid
     margin-top: 15px
     @include styleclass('w-full grid grid-nogutter')
   &__header
-    @include styleclass('w-full font-light text-white text-center text-6xl m-0 underline')  
+    
+  
