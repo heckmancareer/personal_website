@@ -5,14 +5,22 @@ import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
 import { TooltipModule } from 'primeng/tooltip';
 import { FieldsetModule } from 'primeng/fieldset';
+import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioMainPageComponent} from './pages/portfolio-main-page/portfolio-main-page.component';
 import { SkillsFrameComponent } from './components/skills-frame/skills-frame.component';
 import { EmployerHistoryFrameComponent } from './components/employer-history-frame/employer-history-frame.component';
+import { CertificationBadgeComponent } from './components/certification-badge/certification-badge.component';
 
 @NgModule({
-  declarations: [ PortfolioMainPageComponent, SkillsFrameComponent, EmployerHistoryFrameComponent ],
+  declarations: [ 
+    PortfolioMainPageComponent, 
+    SkillsFrameComponent, 
+    EmployerHistoryFrameComponent, 
+    CertificationBadgeComponent 
+  ],
   imports: [
     CommonModule,
     PortfolioRoutingModule,
@@ -20,7 +28,9 @@ import { EmployerHistoryFrameComponent } from './components/employer-history-fra
     StyleClassModule,
     TooltipModule,
     FieldsetModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CardModule,
+    DialogModule
   ]
 })
 export class PortfolioModule { }

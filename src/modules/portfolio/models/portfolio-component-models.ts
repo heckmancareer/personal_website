@@ -17,3 +17,12 @@ export interface EmployerInfo {
   summaryBullets: string[],
   primarySkills: SkillEmblem[]
 }
+
+export interface CertificationInfo {
+  logoPath: string,
+  certName: string,
+  dateAcquired: string,
+  certDescription: string,
+  certEvidencePath: string,
+  vendorLink: string
+}

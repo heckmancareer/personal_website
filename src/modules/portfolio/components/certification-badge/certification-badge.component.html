@@ -1,0 +1,26 @@
+<p-card header="{{cert.certName}}" subheader="Acquired: {{cert.dateAcquired}}">
+  <p class="m-0 relative flex justify-content-center align-items-center">
+    <img ngSrc="{{relativeImagePath + cert.logoPath}}" width="300" height="300">
+  </p>
+  <ng-template pTemplate="footer">
+    <p-button label="Learn More" [link]="true" (click)="showDialog()"></p-button>
+  </ng-template>
+</p-card>
+<p-dialog 
+  header="{{cert.certName}}" 
+  [(visible)]="dialogVisible" 
+  [style]="{width: '75vw'}"
+  [modal]="true"
+  [draggable]="false"
+  [resizable]="false"
+  [dismissableMask]="true">
+  <p>
+    {{cert.certDescription}}
+  </p>
+  <p>
+    Acquired: {{cert.dateAcquired}}
+  </p>
+  <p>
+    <p-button label="Link to Vendor" [link]="true" (click)="redirect(cert.vendorLink)"></p-button>
+  </p>
+</p-dialog>

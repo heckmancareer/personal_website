@@ -6,6 +6,14 @@ $assets-path: '../../../../assets'
 $background-assets-path: '/backgrounds'
 $full-background-assets-path: $assets-path + '' + $background-assets-path
 
+.certifications-section
+  background-image: url($full-background-assets-path + '/layered-blobs-purple.svg')
+  &__grid
+    @include styleclass('w-full grid grid-nogutter')
+  &__header
+  &__badge
+    @include styleclass('col-12 md:col-6 lg:col-4 p-3')
+
 .content-section
   @include styleclass('w-full min-h-screen bg-cover')
 
@@ -19,6 +27,8 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   background-image: url($full-background-assets-path + '/layered-peaks-green.svg')
   &__grid
     @include styleclass('w-full grid grid-nogutter')
+  &__frame
+    @include styleclass('col-12 lg:col-8 lg:col-offset-2 p-3')
 
 .main-content
   @include styleclass('w-full')
@@ -39,7 +49,7 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   @include styleclass('min-h-screen flex')
 
 .section-header
-  @include styleclass('w-full font-light text-white text-center text-6xl m-0 underline')
+  @include styleclass('w-full font-light text-white text-center text-6xl m-0 pt-4 underline')
 
 .skills-section
   background-image: url($full-background-assets-path + '/layered-waves-blue.svg')

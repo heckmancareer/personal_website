@@ -37,9 +37,19 @@
         </h1>
         <span class="employment-history-section__grid">
           @for (employment of data.employmentHistory; track $index) {
-            <portfolio-employer-history-frame [jobInfo]="employment" class="col-12 lg:col-8 lg:col-offset-2 p-3"></portfolio-employer-history-frame>
+            <portfolio-employer-history-frame [jobInfo]="employment" class="employment-history-section__frame"></portfolio-employer-history-frame>
           }
         </span> 
+      </div>
+      <div class="content-section certifications-section">
+        <h1 class="certifications-section__header section-header">
+          Certifications
+        </h1>
+        <span class="certifications-section__grid">
+          @for (certification of data.certifications; track $index) {
+            <portfolio-certification-badge [cert]="certification" class="certifications-section__badge"></portfolio-certification-badge>
+          }
+        </span>
       </div>
     </main>
   </div>
