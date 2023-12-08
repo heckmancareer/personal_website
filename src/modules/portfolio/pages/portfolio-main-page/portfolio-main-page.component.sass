@@ -25,22 +25,51 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
 
 .employment-history-section
   background-image: url($full-background-assets-path + '/layered-peaks-green.svg')
+  &__header
   &__grid
     @include styleclass('w-full grid grid-nogutter')
   &__frame
     @include styleclass('col-12 lg:col-8 lg:col-offset-2 p-3')
 
+.gradient-background-container
+  @include styleclass('flex align-items-center justify-content-center')
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+  background-size: 400% 400%
+  animation: gradient 15s ease infinite
+  height: 100vh
+
+@keyframes gradient 
+  0% 
+    background-position: 0% 50%
+  50% 
+    background-position: 100% 100%
+  100% 
+    background-position: 0% 50%
+
+
+.intro-card
+  @include styleclass('w-full')
+  max-width: 600px
+  &__content
+    @include styleclass('flex flex-column justify-content-center align-items-center')
+    &__avatar
+      background-color: cyan
+      border-radius: 20px
+      img
+        margin-bottom: -5px
+  &__hello
+  &__name
+  &__title
+
 .main-content
   @include styleclass('w-full')
+  margin-top: $navbar-height
 
 .portfolio-main-page-column-container
   @include styleclass('w-full z-1')
 
-.portfolio-main-content
-  margin-top: 200px
-
 .portfolio-main-navbar
-  @include styleclass('w-full surface-0 px-5 z-2 border-bottom-1 surface-border align-items-center justify-content-between flex')
+  @include styleclass('w-full fixed surface-0 px-5 z-2 border-bottom-1 surface-border align-items-center justify-content-between flex')
   height: $navbar-height
   &__left
     @include styleclass('flex gap-2')
@@ -48,11 +77,18 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
 .portfolio-main-page-container
   @include styleclass('min-h-screen flex')
 
+.projects-section
+  background-image: url($full-background-assets-path + '/polygon-scatter.svg')
+  &__header
+  &__grid
+    @include styleclass('w-full grid grid-nogutter')
+
 .section-header
   @include styleclass('w-full font-light text-white text-center text-6xl m-0 pt-4 underline')
 
 .skills-section
   background-image: url($full-background-assets-path + '/layered-waves-blue.svg')
+  min-height: calc( 100vh - $navbar-height ) !important
   &__frame
     @include styleclass('col-12 lg:col-6 p-3')
   &__grid

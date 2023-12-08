@@ -9,7 +9,7 @@
       <span class="portfolio-main-navbar__left">
         <p-button icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg"></p-button>
         <p-button icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg"></p-button>
-        <p-button icon="pi pi-file" pTooltip="Download Resume" tooltipPosition="bottom" styleClass="p-button p-button-secondary p-button-text p-button-lg"></p-button>
+        <p-button label="Résumé" icon="pi pi-file" pTooltip="Download Resume" tooltipPosition="bottom" styleClass="p-button p-button-secondary p-button-text p-button-lg"></p-button>
       </span>
       <span class="portfolio-main-navbar__right">
         <p-button icon="pi pi-bars" class="lg:hidden" styleClass="p-button-outlined p-button-secondary"
@@ -18,6 +18,26 @@
       </span>
     </header>
     <main class="main-content">
+      <div class="content-section intro-section">
+        <div class="gradient-background-container">
+          <p-card class="intro-card">
+            <div class="intro-card__content">
+              <h2 class="intro-card__hello">Hello! 👋</h2>
+              <div class="intro-card__content__avatar">
+                <img ngSrc="{{relativeImagePath + 'avatar.svg'}}" width="200" height="200">
+              </div>
+              <h1 class="intro-card__name">Nicholas Heckman</h1>
+              <h2 class="intro-card__title">Front-End Developer</h2>
+              <span class="intro-card__profile-links">
+
+              </span>
+              <span class="intro-card__section-links">
+
+              </span>
+            </div>
+          </p-card>
+        </div>
+      </div>
       <div class="content-section skills-section">
         <h1 class="skills-section__header section-header">
           Skills
@@ -50,6 +70,19 @@
             <portfolio-certification-badge [cert]="certification" class="certifications-section__badge"></portfolio-certification-badge>
           }
         </span>
+      </div>
+      <div class="content-section projects-section">
+        <h1 class="projects-section__header section-header">
+          Projects
+        </h1>
+        <span class="projects-section__grid">
+          @for (project of data.projects; track $index) {
+            <portfolio-project-card [project]="project" class="col-12 md:col-6 lg:col-4 p-3"></portfolio-project-card>
+          }
+        </span>
+      </div>
+      <div class="content-section about-me-section">
+
       </div>
     </main>
   </div>

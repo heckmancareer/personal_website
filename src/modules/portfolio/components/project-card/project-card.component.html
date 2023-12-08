@@ -1,0 +1,18 @@
+<p-card header="{{project.projectName}}">
+  <ng-template pTemplate="header">
+    <div class="header-image" style="background-image: url({{relativeImagePath}}{{project.imagePath}});">
+
+    </div>
+  </ng-template>
+  <p>{{project.projectDescription}}</p>
+  <h3>Skills Demonstrated:</h3>
+  <div class="flex flex-wrap">
+    @for (skill of project.skillsDemonstrated; track $index) {
+      <p-chip label="{{skill.imageLabel}}" image="{{relativeSkillImagePath}}{{skill.imagePath}}" class="m-1"></p-chip>
+    }
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button (click)="redirect(project.codeRepoLink)" label="Source Code" icon="pi pi-code" styleClass="p-button p-button-help p-button-text p-button-lg"></p-button>
+    <p-button (click)="redirect(project.demoLink)" label="Demo" icon="pi pi-bookmark" styleClass="p-button p-button-primary p-button-text p-button-lg" class="ml-2"></p-button>
+  </ng-template>
+</p-card>

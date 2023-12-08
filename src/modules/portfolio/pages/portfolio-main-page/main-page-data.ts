@@ -120,5 +120,28 @@ export const PORTFOLIO_DATA = {
       certDescription: `"The AWS Certified Cloud Practitioner validates foundational, high-level understanding of AWS Cloud, services, and terminology.  This is a good starting point on the AWS Certification journey for individuals with no prior IT or cloud experience switching to a cloud career or for line-of-business employees looking for foundational cloud literacy."`,
       certEvidencePath: ''
     }
+  ],
+  projects: [
+    {
+      imagePath: 'ip-tracker.png',
+      projectName: 'IP Address Tracker',
+      codeRepoLink: 'https://github.com/heckmancareer/frontend-mentor_ip-address-tracker',
+      demoLink: 'https://heckmancareer.github.io/frontend-mentor_ip-address-tracker/',
+      projectDescription: 'A Front-End Mentor exercise to create UI that allows a user to input an ID address, then displays its global geographic position on a map.',
+      skillsDemonstrated: [
+        {
+          imagePath: 'html.svg',
+          imageLabel: 'HTML'
+        },
+        {
+          imagePath: 'css.svg',
+          imageLabel: 'CSS'
+        },
+        {
+          imagePath: 'javascript.svg',
+          imageLabel: 'JavaScript'
+        }
+      ]
+    }
   ]
 }

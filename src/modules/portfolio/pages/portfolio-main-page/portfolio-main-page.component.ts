@@ -8,4 +8,5 @@ import { PORTFOLIO_DATA } from './main-page-data';
 })
 export class PortfolioMainPageComponent {
   data: any = PORTFOLIO_DATA
+  relativeImagePath: string = '../../../../assets/'
 }

@@ -26,3 +26,12 @@ export interface CertificationInfo {
   certEvidencePath: string,
   vendorLink: string
 }
+
+export interface ProjectInfo {
+  imagePath: string,
+  projectName: string,
+  codeRepoLink: string,
+  demoLink: string,
+  projectDescription: string,
+  skillsDemonstrated: SkillEmblem[]
+}
