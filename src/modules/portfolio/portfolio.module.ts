@@ -8,6 +8,8 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
 import { ChipModule } from 'primeng/chip';
+import { RippleModule } from 'primeng/ripple';
+import { Divider, DividerModule } from 'primeng/divider';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioMainPageComponent} from './pages/portfolio-main-page/portfolio-main-page.component';
@@ -35,6 +37,8 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     CardModule,
     DialogModule,
     ChipModule,
+    RippleModule,
+    DividerModule
   ]
 })
 export class PortfolioModule { }

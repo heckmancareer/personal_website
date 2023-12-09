@@ -1,5 +1,37 @@
 
 export const PORTFOLIO_DATA = {
+  navLinks: [
+    {
+      text: 'Intro',
+      icon: 'desktop',
+      navTarget: 'introSection'
+    },
+    {
+      text: 'Skills',
+      icon: 'wrench',
+      navTarget: 'skillsSection'
+    },
+    {
+      text: 'Employment History',
+      icon: 'book',
+      navTarget: 'employmentHistorySection'
+    },
+    {
+      text: 'Certifications',
+      icon: 'check-square',
+      navTarget: 'certificationsSection'
+    },
+    {
+      text: 'Projects',
+      icon: 'briefcase',
+      navTarget: 'projectsSection'
+    },
+    {
+      text: 'About Me',
+      icon: 'user',
+      navTarget: 'aboutMeSection'
+    },
+  ],
   skills: [
     {
       groupName: 'Core Technologies',
@@ -118,6 +150,14 @@ export const PORTFOLIO_DATA = {
       dateAcquired: 'December 2023',
       vendorLink: 'https://aws.amazon.com/certification/certified-cloud-practitioner/',
       certDescription: `"The AWS Certified Cloud Practitioner validates foundational, high-level understanding of AWS Cloud, services, and terminology.  This is a good starting point on the AWS Certification journey for individuals with no prior IT or cloud experience switching to a cloud career or for line-of-business employees looking for foundational cloud literacy."`,
+      certEvidencePath: ''
+    },
+    {
+      logoPath: 'bloomsburg.png',
+      certName: 'Bloomsburg University Bachelors Degree of Computer Science',
+      dateAcquired: 'May 2021',
+      vendorLink: 'https://www.bloomu.edu/academics/programs/computer-science-bs',
+      certDescription: 'Computer Science (B.S.) acquired from the ABET accredited program of Bloomsburg University. Completed a curriculum heavily focused in math, Java, and data structures.',
       certEvidencePath: ''
     }
   ],

@@ -5,6 +5,7 @@ $sidebar-width: 260px
 $assets-path: '../../../../assets'
 $background-assets-path: '/backgrounds'
 $full-background-assets-path: $assets-path + '' + $background-assets-path
+$sky-color: #63C5DA
 
 .certifications-section
   background-image: url($full-background-assets-path + '/layered-blobs-purple.svg')
@@ -18,10 +19,21 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   @include styleclass('w-full min-h-screen bg-cover')
 
 .custom-sidebar
-  @include styleclass('z-2 border-right-1 lg:static lg:inline h-screen left-0 top-0 animation-duration-100 fixed surface-section')
+  @include styleclass('z-2 border-right-1 lg:static lg:inline h-screen left-0 top-0 animation-duration-100 fixed surface-section flex-shrink-0')
   width: $sidebar-width
   &__content
     @include styleclass('fixed')
+    width: $sidebar-width
+  &__header
+    @include styleclass('w-full flex justify-content-center align-items-center border-bottom-1 font-semibold font-xl text-white')
+    height: $navbar-height
+    background-color: $sky-color
+  &__navigation
+    @include styleclass('w-full flex flex-column')
+    ul
+      @include styleclass('list-none p-2 m-0')
+    &__link
+      @include styleclass('p-ripple p-element flex align-items-center cursor-pointer p-3 hover:surface-100 border-round transition-colors transition-duration-150')
 
 .employment-history-section
   background-image: url($full-background-assets-path + '/layered-peaks-green.svg')
@@ -54,7 +66,7 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
     @include styleclass('flex flex-column justify-content-center align-items-center')
     &__avatar
       @include styleclass('m-2')
-      background-color: #63C5DA
+      background-color: $sky-color
       border-radius: 20px
       img
         margin-bottom: -5px
@@ -73,6 +85,8 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   &__section-links
     @include styleclass('flex flex-wrap align-items-center justify-content-center gap-2')
 
+.intro-section
+
 .main-content
   @include styleclass('w-full')
   margin-top: $navbar-height
@@ -85,6 +99,7 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
   height: $navbar-height
   &__left
     @include styleclass('flex gap-2')
+  &__right
 
 .portfolio-main-page-container
   @include styleclass('min-h-screen flex')

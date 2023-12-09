@@ -1,14 +1,35 @@
 <div class="portfolio-main-page-container">
-  <aside id="portfolio-main-sidebar" class="custom-sidebar hidden">
+  <aside id="portfolio-main-sidebar" class="custom-sidebar hidden" #sidebar>
     <span class="custom-sidebar__content">
-      Hello There
+      <div class="custom-sidebar__header">
+        Nicholas Heckman
+      </div>
+      <div class="custom-sidebar__navigation">
+        <ul>
+          @for (link of data.navLinks; track $index) {
+            <li>
+              <a class="custom-sidebar__navigation__link" pRipple (click)="scrollToElementWithOffset(link.navTarget)">
+                <i class="pi pi-{{link.icon}} mr-2 text-700" style="font-size: 1.5rem;"></i>
+                <span class="font-medium text-700">{{link.text}}</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+      <p-divider></p-divider>
+      <h4 class="ml-2 m-0">Email me at:</h4>
+      <h4 class="m-0 text-center">
+        <a href="mailto:heckmancareer@vivaldi.net">
+          {{'heckmancareer@vivaldi.net'}}
+        </a>
+      </h4>
     </span>
   </aside>
   <div class="portfolio-main-page-column-container">
     <header class="portfolio-main-navbar">
       <span class="portfolio-main-navbar__left">
-        <p-button icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg"></p-button>
-        <p-button icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg"></p-button>
+        <p-button icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg" (click)="redirect(githubWebAddress)"></p-button>
+        <p-button icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg" (click)="redirect(linkedInWebAddress)"></p-button>
         <p-button label="Résumé" icon="pi pi-file" pTooltip="Download Resume" tooltipPosition="bottom" styleClass="p-button p-button-secondary p-button-text p-button-lg"></p-button>
       </span>
       <span class="portfolio-main-navbar__right">
@@ -18,7 +39,7 @@
       </span>
     </header>
     <main class="main-content">
-      <div class="content-section intro-section">
+      <div id="introSection" class="content-section intro-section" #scrollTarget>
         <div class="gradient-background-container">
           <p-card class="intro-card">
             <div class="intro-card__content">
@@ -28,11 +49,15 @@
               </div>
               <h1 class="intro-card__name">Nicholas Heckman</h1>
               <h2 class="intro-card__title">Front-End Developer</h2>
-              <h3 class="intro-card__contact-email">{{'Contact: heckmancareer@vivaldi.net'}}</h3>
+              <h3 class="intro-card__contact-email">
+                <a href="mailto:heckmancareer@vivaldi.net">
+                  {{'heckmancareer@vivaldi.net'}}
+                </a>
+              </h3>
               <h2 class="intro-card__button-header">Links:</h2>
               <span class="intro-card__profile-links">
-                <p-button label="Github" icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg"></p-button>
-                <p-button label="LinkedIn" icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg"></p-button>
+                <p-button label="Github" icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg" (click)="redirect(githubWebAddress)"></p-button>
+                <p-button label="LinkedIn" icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg" (click)="redirect(linkedInWebAddress)"></p-button>
                 <p-button label="Résumé" icon="pi pi-file" pTooltip="Download Resume" tooltipPosition="bottom" styleClass="p-button p-button-secondary p-button-text p-button-lg"></p-button>
               </span>
               <h2 class="intro-card__button-header">Navigate To:</h2>
