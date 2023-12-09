@@ -28,19 +28,28 @@
               </div>
               <h1 class="intro-card__name">Nicholas Heckman</h1>
               <h2 class="intro-card__title">Front-End Developer</h2>
+              <h3 class="intro-card__contact-email">{{'Contact: heckmancareer@vivaldi.net'}}</h3>
+              <h2 class="intro-card__button-header">Links:</h2>
               <span class="intro-card__profile-links">
-
+                <p-button label="Github" icon="pi pi-github" pTooltip="Github Profile" tooltipPosition="bottom" styleClass="p-button p-button-help p-button-text p-button-lg"></p-button>
+                <p-button label="LinkedIn" icon="pi pi-linkedin" pTooltip="LinkedIn Profile" tooltipPosition="bottom" styleClass="p-button p-button-primary p-button-text p-button-lg"></p-button>
+                <p-button label="Résumé" icon="pi pi-file" pTooltip="Download Resume" tooltipPosition="bottom" styleClass="p-button p-button-secondary p-button-text p-button-lg"></p-button>
               </span>
+              <h2 class="intro-card__button-header">Navigate To:</h2>
               <span class="intro-card__section-links">
-
+                <p-button label="Skills" icon="pi pi-wrench" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('skillsSection')"></p-button>
+                <p-button label="Employment History" icon="pi pi-book" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('employmentHistorySection')"></p-button>
+                <p-button label="Certifications" icon="pi pi-check-square" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('certificationsSection')"></p-button>
+                <p-button label="Projects" icon="pi pi-briefcase" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('projectsSection')"></p-button>
+                <p-button label="About Me" icon="pi pi-user" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('aboutMeSection')"></p-button>
               </span>
             </div>
           </p-card>
         </div>
       </div>
-      <div class="content-section skills-section">
+      <div id="skillsSection" class="content-section skills-section" #scrollTarget>
         <h1 class="skills-section__header section-header">
-          Skills
+          <i class="pi pi-wrench" style="font-size: 2.5rem;"></i> Skills 
         </h1>
         <span class="skills-section__grid">
           @for (group of data.skills; track $index) {
@@ -51,9 +60,9 @@
           }
         </span>
       </div>
-      <div class="content-section employment-history-section">
+      <div id="employmentHistorySection" class="content-section employment-history-section" #scrollTarget>
         <h1 class="employment-history-section__header section-header">
-          Work History
+          <i class="pi pi-book" style="font-size: 2.5rem;"></i> Employment History
         </h1>
         <span class="employment-history-section__grid">
           @for (employment of data.employmentHistory; track $index) {
@@ -61,9 +70,9 @@
           }
         </span> 
       </div>
-      <div class="content-section certifications-section">
+      <div id="certificationsSection" class="content-section certifications-section" #scrollTarget>
         <h1 class="certifications-section__header section-header">
-          Certifications
+          <i class="pi pi-check-square" style="font-size: 2.5rem;"></i> Certifications
         </h1>
         <span class="certifications-section__grid">
           @for (certification of data.certifications; track $index) {
@@ -71,9 +80,9 @@
           }
         </span>
       </div>
-      <div class="content-section projects-section">
+      <div id="projectsSection" class="content-section projects-section" #scrollTarget>
         <h1 class="projects-section__header section-header">
-          Projects
+          <i class="pi pi-briefcase" style="font-size: 2.5rem;"></i> Projects
         </h1>
         <span class="projects-section__grid">
           @for (project of data.projects; track $index) {
@@ -81,8 +90,10 @@
           }
         </span>
       </div>
-      <div class="content-section about-me-section">
-
+      <div id="aboutMeSection" class="content-section about-me-section" #scrollTarget>
+        <h1 class="section-header">
+          <i class="pi pi-user" style="font-size: 2.5rem;"></i> About Me
+        </h1>
       </div>
     </main>
   </div>

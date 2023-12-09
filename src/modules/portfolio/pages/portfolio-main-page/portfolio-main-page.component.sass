@@ -48,18 +48,30 @@ $full-background-assets-path: $assets-path + '' + $background-assets-path
 
 
 .intro-card
-  @include styleclass('w-full')
+  @include styleclass('w-full p-2')
   max-width: 600px
   &__content
     @include styleclass('flex flex-column justify-content-center align-items-center')
     &__avatar
-      background-color: cyan
+      @include styleclass('m-2')
+      background-color: #63C5DA
       border-radius: 20px
       img
         margin-bottom: -5px
+  &__button-header
+    @include styleclass('m-2')
+  &__contact-email
+    @include styleclass('m-2')
   &__hello
+    @include styleclass('m-0')
   &__name
+    @include styleclass('m-0')
   &__title
+    @include styleclass('m-0 font-italic')
+  &__profile-links
+    @include styleclass('flex flex-wrap align-items-center justify-content-center gap-2')
+  &__section-links
+    @include styleclass('flex flex-wrap align-items-center justify-content-center gap-2')
 
 .main-content
   @include styleclass('w-full')
