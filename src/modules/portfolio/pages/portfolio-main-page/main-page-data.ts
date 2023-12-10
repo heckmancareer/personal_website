@@ -26,11 +26,11 @@ export const PORTFOLIO_DATA = {
       icon: 'briefcase',
       navTarget: 'projectsSection'
     },
-    {
-      text: 'About Me',
-      icon: 'user',
-      navTarget: 'aboutMeSection'
-    },
+    // {
+    //   text: 'About Me',
+    //   icon: 'user',
+    //   navTarget: 'aboutMeSection'
+    // },
   ],
   skills: [
     {

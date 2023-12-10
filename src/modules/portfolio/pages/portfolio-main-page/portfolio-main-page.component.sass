@@ -7,6 +7,10 @@ $background-assets-path: '/backgrounds'
 $full-background-assets-path: $assets-path + '' + $background-assets-path
 $sky-color: #63C5DA
 
+.about-me-section
+  @include-styleclass('w-full min-h-screen bg-cover')
+  background-image: url($full-background-assets-path + '/abstract.svg')
+
 .certifications-section
   background-image: url($full-background-assets-path + '/layered-blobs-purple.svg')
   &__grid

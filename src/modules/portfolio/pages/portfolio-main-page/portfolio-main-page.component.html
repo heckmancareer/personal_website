@@ -17,7 +17,10 @@
         </ul>
       </div>
       <p-divider></p-divider>
-      <h4 class="ml-2 m-0">Email me at:</h4>
+      <h4 class="ml-2 m-0">
+        <i class="pi pi-envelope"></i>
+        Email me at:
+      </h4>
       <h4 class="m-0 text-center">
         <a href="mailto:heckmancareer@vivaldi.net">
           {{'heckmancareer@vivaldi.net'}}
@@ -66,7 +69,7 @@
                 <p-button label="Employment History" icon="pi pi-book" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('employmentHistorySection')"></p-button>
                 <p-button label="Certifications" icon="pi pi-check-square" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('certificationsSection')"></p-button>
                 <p-button label="Projects" icon="pi pi-briefcase" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('projectsSection')"></p-button>
-                <p-button label="About Me" icon="pi pi-user" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('aboutMeSection')"></p-button>
+                <!-- <p-button label="About Me" icon="pi pi-user" styleClass="p-button p-button-info" (click)="scrollToElementWithOffset('aboutMeSection')"></p-button> -->
               </span>
             </div>
           </p-card>
@@ -115,11 +118,12 @@
           }
         </span>
       </div>
-      <div id="aboutMeSection" class="content-section about-me-section" #scrollTarget>
+      <!-- <div id="aboutMeSection" class="content-section about-me-section" #scrollTarget>
         <h1 class="section-header">
           <i class="pi pi-user" style="font-size: 2.5rem;"></i> About Me
         </h1>
-      </div>
+        <p>Thank you for reading this far!</p>
+      </div> -->
     </main>
   </div>
 </div>
