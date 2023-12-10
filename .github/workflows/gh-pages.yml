@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build and Deploy Angular
-      uses: AhsanAyaz/angular-deploy-gh-pages-actions@1.4.0
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
       with: 
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production
