@@ -16,7 +16,6 @@ jobs:
       with: 
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production
-        base_href: /personal_website/
         deploy_branch: gh-pages
         angular_dist_build_folder: dist/personal_website
         
