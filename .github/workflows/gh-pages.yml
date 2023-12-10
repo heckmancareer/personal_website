@@ -27,3 +27,4 @@ jobs:
       with:
         branch: gh-pages
         folder: dist/personal_website
+        token: ${{ secrets.GITHUB_TOKEN }}
