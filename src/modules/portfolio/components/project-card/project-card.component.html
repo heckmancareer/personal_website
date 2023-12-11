@@ -1,14 +1,14 @@
 <p-card header="{{project.projectName}}">
   <ng-template pTemplate="header">
     <div class="header-image">
-      <img ngSrc="../../../../assets/project-images/{{project.imagePath}}" width="200" height="200" style="border-radius: 5px;">
+      <img ngSrc="assets/project-images/{{project.imagePath}}" width="200" height="200" style="border-radius: 5px;">
     </div>
   </ng-template>
   <p>{{project.projectDescription}}</p>
   <h3>Skills Demonstrated:</h3>
   <div class="flex flex-wrap">
     @for (skill of project.skillsDemonstrated; track $index) {
-      <p-chip label="{{skill.imageLabel}}" image="../../../../assets/emblems/{{skill.imagePath}}" class="m-1"></p-chip>
+      <p-chip label="{{skill.imageLabel}}" image="assets/emblems/{{skill.imagePath}}" class="m-1"></p-chip>
     }
   </div>
   <ng-template pTemplate="footer">

@@ -7,6 +7,6 @@ import { EmployerInfo } from '../../models/portfolio-component-models';
   styleUrl: './employer-history-frame.component.sass'
 })
 export class EmployerHistoryFrameComponent {
-  @Input() relativeImagePath: string = '../../../../assets/emblems/'
+  @Input() relativeImagePath: string = 'assets/emblems/'
   @Input() jobInfo!: EmployerInfo
 }
