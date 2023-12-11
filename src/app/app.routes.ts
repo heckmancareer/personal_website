@@ -7,6 +7,10 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
+      path: '**',
+      redirectTo: '/portfolio',
+    },
+    {
         path: 'portfolio',
         loadChildren: () => import('../modules/portfolio/portfolio.module').then(m => m.PortfolioModule)
     }
