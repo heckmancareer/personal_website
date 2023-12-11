@@ -15,9 +15,8 @@ export class PortfolioMainPageComponent {
   private readonly scrollOffset = 60
   private readonly largeBreakpoint = 992
   data: any = PORTFOLIO_DATA
-  relativeImagePath: string = '../../../../assets/'
   githubWebAddress: string = 'https://github.com/heckmancareer'
-  linkedInWebAddress: string = 'www.linkedin.com/in/nicholas-heckman-78094212a'
+  linkedInWebAddress: string = 'https://linkedin.com/in/nicholas-heckman-78094212a'
 
   constructor(@Inject(DOCUMENT) private document: Document){}
 

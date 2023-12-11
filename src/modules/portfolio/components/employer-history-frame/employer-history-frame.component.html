@@ -2,7 +2,7 @@
   <ng-template pTemplate="header">
     <span class="header-container">
       @if (jobInfo.endDate === 'Present') {
-        <img src="{{relativeImagePath + jobInfo.logoPath}}" />
+        <img src="../../../../assets/emblems/{{jobInfo.logoPath}}" />
       }
       {{jobInfo.employerName}}
     </span>
@@ -31,7 +31,7 @@
         @for (skill of jobInfo.primarySkills; track $index) {
           <div class="skill-emblem">
             <span class="skill-emblem__image">
-              <img ngSrc="{{relativeImagePath + '' + skill.imagePath}}" width="100" height="100">
+              <img ngSrc="../../../../assets/emblems/{{skill.imagePath}}" width="100" height="100">
             </span>
             <span class="skill-emblem__label">
               {{skill.imageLabel}}

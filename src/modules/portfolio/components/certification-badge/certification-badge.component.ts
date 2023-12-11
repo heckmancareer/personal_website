@@ -8,7 +8,6 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './certification-badge.component.sass'
 })
 export class CertificationBadgeComponent {
-  @Input() relativeImagePath: string = '../../../../assets/emblems/'
   @Input() cert!: CertificationInfo
   dialogVisible: boolean = false
 

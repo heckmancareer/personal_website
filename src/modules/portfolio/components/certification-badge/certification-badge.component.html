@@ -1,6 +1,6 @@
 <p-card header="{{cert.certName}}" subheader="Acquired: {{cert.dateAcquired}}">
   <p class="m-0 relative flex justify-content-center align-items-center">
-    <img ngSrc="{{relativeImagePath + cert.logoPath}}" width="300" height="300">
+    <img ngSrc="../../../../assets/emblems/{{cert.logoPath}}" width="300" height="300">
   </p>
   <ng-template pTemplate="footer">
     <p-button label="Learn More" [link]="true" (click)="showDialog()"></p-button>
