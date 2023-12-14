@@ -167,7 +167,7 @@ export const PORTFOLIO_DATA = {
       projectName: 'IP Address Tracker',
       codeRepoLink: 'https://github.com/heckmancareer/frontend-mentor_ip-address-tracker',
       demoLink: 'https://heckmancareer.github.io/frontend-mentor_ip-address-tracker/',
-      projectDescription: 'A Front-End Mentor exercise to create UI that allows a user to input an ID address, then displays its global geographic position on a map.',
+      projectDescription: 'A Front-End Mentor exercise to create a UI that allows a user to input an IP address, then displays its global geographic position on a map.',
       skillsDemonstrated: [
         {
           imagePath: 'html.svg',
